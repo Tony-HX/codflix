@@ -24,6 +24,7 @@
             </div>
             <div class="title"><?= $media['title']; ?></div>
         </a>
+        <a href="index.php?action=details">Details</a>
     <?php endforeach; ?>
 </div>
 
