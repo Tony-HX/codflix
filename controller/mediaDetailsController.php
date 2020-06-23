@@ -3,13 +3,13 @@
 require_once( 'model/media.php' );
 
 /***************************
-* ----- LOAD HOME PAGE -----
+* ----- LOAD DETAILS PAGE -----
 ***************************/
 
 function mediaDetailsPage() {
 
-  $search = isset( $_GET['titl'] ) ? $_GET['titl'] : null;
-  $medias = Media::filterMedias( $search );
+  $id = isset( $_GET['media'] ) ? $_GET['media'] : null;
+  $info = Media::getMediaDetails( $id );
 
   require('view/mediaDetailsView.php');
 

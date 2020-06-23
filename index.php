@@ -40,13 +40,11 @@ if ( isset( $_GET['action'] ) ):
 
     break;
 
-    case 'details':
-
-      mediaDetailsPage();
-
-    break;
-
   endswitch;
+
+elseif ( isset( $_GET['media'] ) ):
+
+    mediaDetailsPage();
 
 else:
 

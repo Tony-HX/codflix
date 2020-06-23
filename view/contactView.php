@@ -1,7 +1,9 @@
 <?php ob_start(); ?>
 
 <div> 
-<P>Contactez-nous!</P>
+
+<a href = 'mailto:contact@codflix.com'><P>Contactez-nous!</P></a>
+
 </div>
 
 <?php $content = ob_get_clean(); ?>
