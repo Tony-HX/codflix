@@ -66,7 +66,6 @@ class User {
 
   public function createUser() {
 
-    // Open database connection
     $db   = init_db();
 
     // Check if email already exist
@@ -84,9 +83,9 @@ class User {
       'password'  => $this->getPassword()
     ));
 
+
     // Close databse connection
     $db = null;
-
   }
 
   /**************************************

@@ -93,14 +93,22 @@ class Media {
     // Open database connection
     $db   = init_db();
 
-    $req  = $db->prepare( "SELECT * FROM media" );
-    $req->execute( array( '%' . $title . '%' ));
+    if(isset($_GET['title'])){
+
+      $req  = $db->prepare( "SELECT * FROM media WHERE title LIKE '%{$title}%' " ); //select everything in the db that contains the entry in its title
+      $req->execute( array( '%' . $title . '%' ));
+
+    }else{
+
+      $req  = $db->prepare( "SELECT * FROM media ORDER BY release_date DESC" );
+      $req->execute( array( '%' . $title . '%' ));
+
+    }
 
     // Close databse connection
     $db   = null;
 
     return $req->fetchAll();
-
   }
 
   public static function getMediaDetails( $id ) {

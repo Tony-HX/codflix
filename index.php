@@ -26,6 +26,11 @@ if ( isset( $_GET['action'] ) ):
     case 'signup':
 
       signupPage();
+      
+      //if the input are filled, verify the info within
+      if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password_confirm']) ){
+          verificationSignUpForm($_POST);
+      }
 
     break;
 

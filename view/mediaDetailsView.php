@@ -41,7 +41,7 @@
 
         <?php foreach( $episodes as $episode ):?>
                    
-                <div class="title"><?= 's' . $episode['season'] . 'e' . $episode['episode'] . ' ' . '<b>'. $episode['episode_title'] . '</b>' . ' ' . '<br>' . $episode['episode_summary'] . '<a href="' . $episode['episode_url'] . '"><div>Visionner</div></a>' ; ?></div>
+                <div class="title"><?= 's' . $episode['season'] . 'e' . $episode['episode'] . ' ' . '<b>'. $episode['episode_title'] . '</b>' . ' ' . $episode['episode_duration'] . '<br>' . $episode['episode_summary'] . '<a href="' . $episode['episode_url'] . '"><div>Visionner</div></a>' ; ?></div>
             
         <?php endforeach; ?>
 
