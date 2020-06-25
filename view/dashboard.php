@@ -20,6 +20,7 @@
           <ul>
             <li><a href="index.php">Médias</a></li>
             <li><a href="index.php?action=profile">Mon profil</a></li>
+            <li><a href="index.php?action=history">Historique</a></li>
             <li><a href="index.php?action=contact">Nous contacter</a></li>
             <li><a href="index.php?action=logout">Me déconnecter</a></li>
           </ul>
