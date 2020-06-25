@@ -6,6 +6,7 @@ require_once( 'controller/signupController.php' );
 require_once( 'controller/mediaController.php' );
 require_once( 'controller/contactController.php' );
 require_once( 'controller/mediaDetailsController.php' );
+require_once( 'controller/profileController.php' );
 
 /**************************
 * ----- HANDLE ACTION -----
@@ -40,9 +41,16 @@ if ( isset( $_GET['action'] ) ):
 
     break;
 
-  endswitch;
+    case 'profile':
 
-elseif ( isset( $_GET['media'] ) ):
+      profilePage();
+
+    break;
+
+  endswitch;
+  
+ //the <a> tag has a 'media' value that's actually the movie's id in its href, when we make a positive check on it we trigger details page for that id
+elseif ( isset( $_GET['media'] ) ): 
 
     mediaDetailsPage();
 
